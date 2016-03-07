@@ -16,5 +16,10 @@
 	<title>Gem Store</title>
 </head>
 <body>
+	<div ng-controller="StoreController as store">
+		<h2>{{store.product.name}}</h2>
+		<h3>${{store.product.price}}</h3>
+		<p>{{store.product.description}}</p>
+	</div>
 </body>
 </html>
