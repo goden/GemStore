@@ -1,7 +1,21 @@
 (function() {
+
 	var app = angular.module("store", []);
 	app.controller("StoreController", function() {
 		this.products = gems;
+	});
+
+	app.controller("PanelController", function() {
+
+		this.tab = 1;
+
+		this.selectTab = function(selectedTab) {
+			this.tab = selectedTab;
+		};
+
+		this.isSelected = function(currentTab) {
+			return this.tab === currentTab;
+		};
 	});
 
 
