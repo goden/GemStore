@@ -16,7 +16,7 @@
 	<title>Gem Store</title>
 </head>
 <body ng-controller="StoreController as store">
-	<div class="list-group">
+	<div ng-show="!store.product.soldOut" class="list-group">
 		<div class="list-group-item">
 			<h2> {{store.product.name}} </h2>
 			<h3> ${{store.product.price}} </h3>
