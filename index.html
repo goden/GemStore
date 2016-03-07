@@ -23,7 +23,26 @@
 				 <em class="pull-right"> {{product.price|currency}} </em>
 				 <img ng-src="{{product.images[1].src}}" />
 			</h3>
-
+			<section>
+				<ul class="nav nav-pills">
+					<li><a href="" ng-click="tab = 1">Description</a></li>
+					<li><a href="" ng-click="tab = 2">Specifications</a></li>
+					<li><a href="" ng-click="tab = 3">Reviews</a></li>
+				</ul>
+				{{tab}}
+			<div class="panel">
+				<h4>Description</h4>
+				<p>{{product.description}}</p>
+			</div>
+			<div class="panel">
+				<h4>Specifications</h4>
+				<p>Not yet</p>
+			</div>
+			<div class="panel">
+				<h4>Reviews</h4>
+				<p>Not yet</p>
+			</div>
+			</section>
 			<!--
 			<p> {{product.description}} </p>
 			<button ng-show="product.canPurchase"> Add to Cart </button>
