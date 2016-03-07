@@ -47,6 +47,30 @@
 						{{review.body}} - 
 						<cite>by: {{review.author}}</cite>
 					</blockquote>
+					<div class="reviewFormDiv">
+						<form name="reviewForm">
+							<div class="form-group">
+								<label>評價</label>
+								<select class="form-control">
+									<option value="1">1 star</option> 
+									<option value="2">2 stars</option> 
+									<option value="3">3 stars</option> 
+									<option value="4">4 stars</option> 
+									<option value="5">5 stars</option> 
+								</select>
+							</div>
+							<div class="form-group">
+								<label>心得</label>
+								<textarea class="form-control"></textarea>
+							</div>
+
+							<div class="form-group">
+								<label>by:</label>
+								<input type="email" class="form-control"/>
+							</div>
+							<input type="submit" value="Submit" class="btn btn-default" /> 
+						</form>
+					</div>
 				</div>
 			</section>
 			<!--
