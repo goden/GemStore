@@ -17,15 +17,10 @@
 </head>
 <body ng-controller="StoreController as store">
 	<div ng-repeat="product in store.products">
-		
-	</div>
-	<div ng-hide="store.product.soldOut" class="list-group">
-		<div class="list-group-item">
-			<h2> {{store.product.name}} </h2>
-			<h3> ${{store.product.price}} </h3>
-			<p> {{store.product.description}} </p>
-			<button ng-show="store.product.canPurchase"> Add to Cart </button>
-		</div>
+		<h2> {{product.name}} </h2>
+		<h3> ${{product.price}} </h3>
+		<p> {{product.description}} </p>
+		<button ng-show="product.canPurchase"> Add to Cart </button>
 	</div>
 </body>
 </html>
