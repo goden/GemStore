@@ -14,13 +14,13 @@
 		canPurchase: false,
 		soldOut: false
 	}, {
-		name: "皇家鑽石",
+		name: "無暇血鑽石",
 		price: 350000,
 		description: "永恆、純淨 - 鑽石是所有寶石中硬度最高的一種，所以被視為忠貞愛情的最佳代言寶石。",
 		canPurchase: true,
 		soldOut: false
 	}, {
-		name: "無暇紅寶石",
+		name: "皇家紅寶石",
 		price: 250000,
 		description: "純潔、財富、誠心 - 縱觀歷史，所有國家的皇室和文化皆視紅寶石為特別的標誌，象徵永恆的美麗、財富和權力。",
 		canPurchase: true,
