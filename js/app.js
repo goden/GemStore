@@ -33,6 +33,15 @@
 		}, {
 			src: "../images/purple_small_64x64.png",
 			thumb: "purple_small_64x64.png"
+		}],
+		reviews: [{
+			stars: 5,
+			body: "這寶石真是太棒了!",
+			author: "demo1@example.com"
+		}, {
+			stars: 2,
+			body: "這寶石真是爛透了!",
+			author: "demo1@example.com"
 		}]
 	}, {
 		name: "無暇血鑽石",
@@ -46,6 +55,15 @@
 		}, {
 			src: "../images/diamond_small_64x64.png",
 			thumb: "diamond_small_64x64.png"
+		}],
+		reviews: [{
+			stars: 5,
+			body: "這寶石真是太棒了!",
+			author: "demo1@example.com"
+		}, {
+			stars: 2,
+			body: "這寶石真是爛透了!",
+			author: "demo1@example.com"
 		}]
 	}, {
 		name: "皇家紅寶石",
@@ -59,6 +77,15 @@
 		}, {
 			src: "../images/red_small_64x64.png",
 			thumb: "red_small_64x64.png"
+		}],
+		reviews: [{
+			stars: 3,
+			body: "這個寶石算是差強人意!",
+			author: "demo1@example.com"
+		}, {
+			stars: 2,
+			body: "這寶石只能算是普通石頭!",
+			author: "demo1@example.com"
 		}]
 	}, {
 		name: "方正黃寶石",
@@ -72,6 +99,15 @@
 		}, {
 			src: "../images/yellow_small_64x64.png",
 			thumb: "yellow_small_64x64.png"
+		}],
+		reviews: [{
+			stars: 5,
+			body: "這寶石真是太棒了!",
+			author: "demo1@example.com"
+		}, {
+			stars: 1,
+			body: "這寶石真是爛透了! 成色真不好。",
+			author: "demo1@example.com"
 		}]
 	}, {
 		name: "星芒橄欖綠",
@@ -85,6 +121,15 @@
 		}, {
 			src: "../images/green_small_64x64.png",
 			thumb: "green_small_64x64.png"
+		}],
+		reviews: [{
+			stars: 4,
+			body: "雖然寶石雕刻有所疏失，但是這寶石真是太棒了!",
+			author: "demo1@example.com"
+		}, {
+			stars: 2,
+			body: "這寶石真是爛透了!",
+			author: "demo1@example.com"
 		}]
 	}];
 
