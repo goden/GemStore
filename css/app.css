@@ -14,3 +14,9 @@
   border-radius: 20px;
   padding: 15px;
 }
+.panel .reviewFormDiv form .ng-invalid .ng-dirty {
+  border-color: #FA787E;
+}
+.panel .reviewFormDiv form .ng-valid .ng-dirty {
+  border-color: #78FA89;
+}

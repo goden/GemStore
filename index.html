@@ -49,7 +49,7 @@
 					</blockquote>
 					<div class="reviewFormDiv">
 						<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" 
-												ng-submit="reviewCtrl.addReview(product)">
+												ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
 							<blockquote>
 								<b>評價: {{reviewCtrl.review.stars}}</b><br/>
 								{{reviewCtrl.review.body}} - 
@@ -57,7 +57,7 @@
 							</blockquote>
 							<div class="form-group">
 								<label>評價</label>
-								<select class="form-control" ng-model="reviewCtrl.review.stars">
+								<select class="form-control" ng-model="reviewCtrl.review.stars" required>
 									<option value="1">1 star</option> 
 									<option value="2">2 stars</option> 
 									<option value="3">3 stars</option> 
@@ -67,12 +67,12 @@
 							</div>
 							<div class="form-group">
 								<label>心得</label>
-								<textarea class="form-control" ng-model="reviewCtrl.review.body"></textarea>
+								<textarea class="form-control" ng-model="reviewCtrl.review.body" required placeholder="輸入對產品的看法"></textarea>
 							</div>
 
 							<div class="form-group">
 								<label>by:</label>
-								<input type="email" class="form-control" ng-model="reviewCtrl.review.author"/>
+								<input type="email" class="form-control" ng-model="reviewCtrl.review.author" required placeholder="輸入E-mail" />
 							</div>
 							<input type="submit" value="Submit" class="btn btn-default" /> 
 						</form>
