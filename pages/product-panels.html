@@ -1,0 +1,69 @@
+<section>
+	<ul class="nav nav-pills">
+		<li ng-class="{ active:panel.isSelected(1) }"><a href="" ng-click="panel.selectTab(1)">產品說明</a></li>
+		<li ng-class="{ active:panel.isSelected(2) }"><a href="" ng-click="panel.selectTab(2)">產品規格</a></li>
+		<li ng-class="{ active:panel.isSelected(3) }"><a href="" ng-click="panel.selectTab(3)">顧客心得</a></li>
+	</ul>
+	<div class="panel" ng-show="panel.isSelected(1)">
+		<h4>產品說明</h4>
+		<p>{{product.description}}</p>
+	</div>
+	<div class="panel" ng-show="panel.isSelected(2)">
+		<h4>產品規格</h4>
+		<p>Not yet</p>
+	</div>
+	<div class="panel" ng-show="panel.isSelected(3)">
+		<h4>顧客心得</h4>
+		<blockquote ng-repeat="review in product.reviews">
+			<b>評價: {{review.stars}}</b><br/>
+			{{review.body}} - 
+			<cite>by: {{review.author}}</cite>
+		</blockquote>
+		<div class="reviewFormDiv">
+			<form id="reviewForm{{$index}}" name="reviewForm" 
+				  ng-controller="ReviewController as reviewCtrl" 
+				  ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
+				<blockquote>
+					<b>評價: {{reviewCtrl.review.stars}}</b><br/>
+					{{reviewCtrl.review.body}} - 
+					<cite>by: {{reviewCtrl.review.author}}</cite>
+				</blockquote>
+				<div class="form-group">
+					<label>評價</label>
+					<select name="stars" class="form-control" ng-model="reviewCtrl.review.stars" required>
+						<option value="1">1 star</option> 
+						<option value="2">2 stars</option> 
+						<option value="3">3 stars</option> 
+						<option value="4">4 stars</option> 
+						<option value="5">5 stars</option> 
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label>心得</label>
+					<textarea name="body" class="form-control" ng-model="reviewCtrl.review.body" required placeholder="輸入使用心得"></textarea>
+				</div>
+
+				<div class="form-group">
+					<label>by</label>
+					<input name="author" type="email" class="form-control" ng-model="reviewCtrl.review.author" required placeholder="輸入E-mail" />
+				</div>
+				
+				<div ng-show="reviewForm.$dirty && reviewForm.$invalid">資料輸入有錯誤，請重新檢視。</div>
+
+				<input type="submit" value="Submit" class="btn btn-default" 
+					   ng-disabled="reviewForm.$invalid" /> 
+				<!--
+				<code>
+					<br/>
+					reviewForm.stars.$error.required: {{reviewForm.stars.$error.required}} <br/>
+					reviewForm.body.$error.required: {{reviewForm.body.$error.required}} <br/>
+					reviewForm.author.$error.required: {{reviewForm.author.$error.required}} <br/>
+					reviewForm.$pristine: {{reviewForm.$pristine}} <br/>
+					reviewForm.$dirty: {{reviewForm.$dirty}} <br/>
+				</code>
+				-->
+			</form>
+		</div>
+	</div>
+</section>

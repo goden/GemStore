@@ -35,6 +35,13 @@
 		};
 	});
 
+	app.directive("productPanels", function() {
+		return {
+			restrict: "E",
+			templateUrl: "../pages/product-panels.html"
+		};
+	});
+
 
 	// prepare data for presentation
 	// 
