@@ -7,7 +7,7 @@
 
 	app.controller("PanelController", function() {
 
-		this.tab = 1;
+		this.tab = 3;
 
 		this.selectTab = function(selectedTab) {
 			this.tab = selectedTab;
@@ -16,6 +16,10 @@
 		this.isSelected = function(currentTab) {
 			return this.tab === currentTab;
 		};
+	});
+
+	app.controller("ReivewController", function() {
+		this.reivew = {};
 	});
 
 
