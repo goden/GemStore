@@ -28,6 +28,13 @@
 		};
 	});
 
+	app.directive("productHeader", function() {
+		return {
+			restrict: "E",
+			templateUrl: "../pages/product-header.html"
+		};
+	});
+
 
 	// prepare data for presentation
 	// 
