@@ -5,19 +5,6 @@
 		this.products = gems;
 	});
 
-	// app.controller("PanelController", function() {
-
-	// 	this.tab = 3;
-
-	// 	this.selectTab = function(selectedTab) {
-	// 		this.tab = selectedTab;
-	// 	};
-
-	// 	this.isSelected = function(currentTab) {
-	// 		return this.tab === currentTab;
-	// 	};
-	// });
-
 	app.controller("ReviewController", function() {
 
 		this.review = {};
@@ -40,13 +27,12 @@
 			restrict: "E",
 			templateUrl: "../pages/product-panels.html",
 			controller: function() {
-				var self = this;
-				self.tab = 3;
-				self.selectTab = function (selectedTab) {
-					self.tab = selectedTab;
+				this.tab = 1;
+				this.selectTab = function (selectedTab) {
+					this.tab = selectedTab;
 				};
-				self.isSelected = function (currentTab) {
-					return self.tab = currentTab;
+				this.isSelected = function (currentTab) {
+					return this.tab === currentTab;
 				};
 			},
 			controllerAs: "panel"
