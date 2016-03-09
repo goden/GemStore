@@ -1,6 +1,6 @@
 (function() {
 
-	var app = angular.module("store", ["directives"]);
+	var app = angular.module("store", ["directives", "ngRoute"]);
 	app.controller("StoreController", ["$http", function($http) {
 
 		var store = this;
@@ -22,6 +22,17 @@
 			product.reviews.push(this.review);
 			this.review = {};
 		};
+	});
+
+
+	app.config(function($routeProvider) {
+		$routeProvider.when("/primary", {
+			templateUrl: "/pages/product-footer-primary.html"
+		}).when("/secondary", {
+			templateUrl: "/pages/product-footer-secondary.html"
+		}).otherwise({
+			redirectTo: "/"
+		});
 	});
 
 })();
