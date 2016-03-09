@@ -19,6 +19,7 @@
 	<title>寶石商店</title>
 </head>
 <body ng-controller="StoreController as store">
+	<div ng-view></div>
 	<ul class="list-group">
 		<li class="list-group-item" ng-repeat="product in store.products">
 			<product-header></product-header>
