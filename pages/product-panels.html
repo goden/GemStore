@@ -48,21 +48,11 @@
 					<label>by</label>
 					<input name="author" type="email" class="form-control" ng-model="reviewCtrl.review.author" required placeholder="輸入E-mail" />
 				</div>
-				
+
 				<div ng-show="reviewForm.$dirty && reviewForm.$invalid">資料輸入有錯誤，請重新檢視。</div>
 
 				<input type="submit" value="Submit" class="btn btn-default" 
 					   ng-disabled="reviewForm.$invalid" /> 
-				<!--
-				<code>
-					<br/>
-					reviewForm.stars.$error.required: {{reviewForm.stars.$error.required}} <br/>
-					reviewForm.body.$error.required: {{reviewForm.body.$error.required}} <br/>
-					reviewForm.author.$error.required: {{reviewForm.author.$error.required}} <br/>
-					reviewForm.$pristine: {{reviewForm.$pristine}} <br/>
-					reviewForm.$dirty: {{reviewForm.$dirty}} <br/>
-				</code>
-				-->
 			</form>
 		</div>
 	</div>
