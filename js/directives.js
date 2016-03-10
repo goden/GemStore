@@ -28,15 +28,14 @@
 		return {
 			restrict: "E",
 			templateUrl: "../pages/product-review-form.html",
-			controller: function() {
-				this.review = {};
+			controller: function($scope) {
+				$scope.review = {};
 
-				this.addReview = function(product) {
-					product.reviews.push(this.review);
-					this.review = {};
+				$scope.addReview = function(product) {
+					product.reviews.push($scope.review);
+					$scope.review = {};
 				};
-			},
-			controllerAs: "reviewCtrl"
+			}
 		};
 	});
 
