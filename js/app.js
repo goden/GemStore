@@ -24,20 +24,37 @@
 		};
 	});
 
+	// use $scope instead of controllerAs
+
+	// app.config(function($routeProvider) {
+	// 	$routeProvider.when("/primary", {
+	// 		templateUrl: "/pages/product-footer-primary.html",
+	// 		controller: function() {
+	// 			this.message = "I am primary.";
+	// 		},
+	// 		controllerAs: "primary"
+	// 	}).when("/secondary", {
+	// 		templateUrl: "/pages/product-footer-secondary.html",
+	// 		controller: function() {
+	// 			this.hint = "I am secondary.";
+	// 		},
+	// 		controllerAs: "secondary"
+	// 	}).otherwise({
+	// 		redirectTo: "/"
+	// 	});
+	// });
 
 	app.config(function($routeProvider) {
 		$routeProvider.when("/primary", {
 			templateUrl: "/pages/product-footer-primary.html",
-			controller: function() {
-				this.message = "I am primary.";
-			},
-			controllerAs: "primary"
+			controller: function($scope) {
+				$scope.message = "I am primary.";
+			}
 		}).when("/secondary", {
 			templateUrl: "/pages/product-footer-secondary.html",
-			controller: function() {
-				this.hint = "I am secondary.";
-			},
-			controllerAs: "secondary"
+			controller: function($scope) {
+				$scope.hint = "I am secondary.";
+			}
 		}).otherwise({
 			redirectTo: "/"
 		});
